@@ -1,7 +1,7 @@
-export default function home(req, res) {
-  res.json({
-    name: 'Joe',
-    lastname: ' Smith',
-    age: 20,
-  });
-}
+// export default function home(req, res) {
+//   res.json({
+//     name: 'Joe',
+//     lastname: ' Smith',
+//     age: 20,
+//   });
+// }

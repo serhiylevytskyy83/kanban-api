@@ -1,6 +1,6 @@
-import User from './Model';
+const User = require('./Model');
 
-export default function userGetById(req, res) {
+function userGetById(req, res) {
   // find({email:"ukr.net"}).limit(1).skip(1)
   const userId = req.params.userId;
   User.findById(userId)
@@ -13,3 +13,5 @@ export default function userGetById(req, res) {
       res.status(400).json('User not created');
     });
 }
+
+module.exports = userGetById;

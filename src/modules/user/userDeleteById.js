@@ -1,6 +1,6 @@
-import User from './Model';
+const User = require('./Model');
 
-export default function userDeleteById(req, res) {
+function userDeleteById(req, res) {
   // find({email:"ukr.net"}).limit(1).skip(1)
   const userId = req.params.userId;
   delete req.body.password;
@@ -15,3 +15,5 @@ export default function userDeleteById(req, res) {
       res.status(400).json('User delete error');
     });
 }
+
+module.exports = userDeleteById;

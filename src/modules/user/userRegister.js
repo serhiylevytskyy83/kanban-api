@@ -1,6 +1,6 @@
-import User from './Model';
+const User = require('./Model');
 
-export default function userRegister(req, res) {
+function userRegister(req, res) {
   const newUser = new User({
     // email: req.body.email,
     // password: req.body.password,
@@ -24,3 +24,5 @@ export default function userRegister(req, res) {
       console.log('END');
     });
 }
+
+module.exports = userRegister;

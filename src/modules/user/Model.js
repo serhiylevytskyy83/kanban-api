@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
@@ -22,4 +22,4 @@ const userSchema = new Schema({
 });
 userSchema.index({ email: 1 }, { unique: true }); // unique index to not duplicate email or set option in MongoDB
 
-export default mongoose.model('User', userSchema);
+module.exports = mongoose.model('User', userSchema);

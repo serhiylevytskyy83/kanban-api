@@ -1,6 +1,6 @@
-import User from './Model';
+const User = require('./Model');
 
-export default function getColumn(req, res) {
+function getColumn(req, res) {
   // find({email:"ukr.net"}).limit(1).skip(1)
 
   User.find()
@@ -13,3 +13,5 @@ export default function getColumn(req, res) {
       res.status(400).json('Columns not created');
     });
 }
+
+module.exports = getColumn;

@@ -1,6 +1,6 @@
-import User from './Model';
+const User = require('./Model');
 
-export default function userGetAll(req, res) {
+function userGetAll(req, res) {
   // find({email:"ukr.net"}).limit(1).skip(1)
 
   User.find()
@@ -13,3 +13,5 @@ export default function userGetAll(req, res) {
       res.status(400).json('User not created');
     });
 }
+
+module.exports = userGetAll;

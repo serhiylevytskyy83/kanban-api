@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 function dbConnect() {
   //mongodb://localhost/express
@@ -19,7 +19,7 @@ function dbConnect() {
   });
 }
 
-export default dbConnect;
+module.exports = dbConnect;
 
 //d8FOnQltm32GM6zR
 //mongodb+srv://admin:d8FOnQltm32GM6zR@cluster0.9inzv.mongodb.net/kanban?retryWrites=true&w=majority

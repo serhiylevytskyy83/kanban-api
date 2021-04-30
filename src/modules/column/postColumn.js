@@ -1,6 +1,6 @@
-import Column from './Model';
+const Column = require('./Model');
 
-export default function postColumn(req, res) {
+function postColumn(req, res) {
   const newColumns = new Column({
     title: req.body.title,
   });
@@ -18,3 +18,5 @@ export default function postColumn(req, res) {
       console.log('END');
     });
 }
+
+module.exports = postColumn;
