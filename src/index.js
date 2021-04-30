@@ -28,7 +28,7 @@ logger(app);
 parseResponse(app);
 cors(app);
 routes(app);
-
+console.log('Hello world');
 // app.get('/', getHome);
 // app.post('/info', postInfo);
 
