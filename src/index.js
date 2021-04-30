@@ -20,7 +20,7 @@ import routes from './modules/core/routes';
 import dbConnect from './modules/core/db';
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 // localhost 5000
 
 dbConnect();
