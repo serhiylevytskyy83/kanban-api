@@ -18,7 +18,6 @@ const userSchema = new Schema({
   description: String,
   priority: String,
   status: String,
-  id: String,
   name: String,
 });
 userSchema.index({ email: 1 }, { unique: true }); // unique index to not duplicate email or set option in MongoDB
