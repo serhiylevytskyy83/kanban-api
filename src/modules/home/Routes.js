@@ -1,7 +1,7 @@
-// import { Router } from 'express';
-// import home from './home';
-// const router = Router();
-//
-// router.get('/', home);
-//
-// export default router;
+const Router = require('express');
+const home = require('./home');
+const router = Router();
+
+router.get('/', home);
+
+module.exports = router;

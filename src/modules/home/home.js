@@ -1,7 +1,5 @@
-// export default function home(req, res) {
-//   res.json({
-//     name: 'Joe',
-//     lastname: ' Smith',
-//     age: 20,
-//   });
-// }
+function home(req, res) {
+  res.json('API Server is working');
+}
+
+module.exports = home;
