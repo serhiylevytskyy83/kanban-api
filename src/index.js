@@ -30,18 +30,6 @@ logger(app);
 parseResponse(app);
 cors(app);
 routes(app);
-//
-// app.get('/', home);
-// function home(req, res) {
-//   res.json({
-//     name: 'Joe',
-//     lastname: ' Smith',
-//     age: 20,
-//   });
-// }
-
-// // app.post('/info', postInfo);
-//
 errorHandler(app);
 
 app.listen(PORT, () => {
