@@ -1,7 +1,7 @@
 // import infoRouter from '../info/Routes';
-const homeRouter = require('../home/Routes');
-const userRouter = require('../user/Routes');
-const columnRouter = require('../column/Routes');
+const homeRouter = require('../home/Routes'),
+  userRouter = require('../user/Routes'),
+  columnRouter = require('../column/Routes');
 
 function routes(app) {
   // app.use('/info', infoRouter);
