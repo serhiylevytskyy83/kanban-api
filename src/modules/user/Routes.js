@@ -5,10 +5,11 @@ const userGetById = require('./userGetById');
 const userUpdateById = require('./userUpdateById');
 const userDeleteById = require('./userDeleteById');
 const userDeleteAll = require('./userDeleteAll');
+const authorization = require('../core/authorization');
 
 const router = Router();
-router.post('/', userRegister); // localhost5000/info
-router.get('/', userGetAll); // localhost/user
+router.post('/', authorization, userRegister); // localhost5000/
+router.get('/', authorization, userGetAll); // localhost/user
 router.get('/:userId', userGetById); // localhost/user/id
 router.patch('/:userId', userUpdateById); // localhost/user/id
 router.delete('/:userId', userDeleteById); // localhost/user/id

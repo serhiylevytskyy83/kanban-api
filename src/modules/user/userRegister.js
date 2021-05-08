@@ -1,13 +1,25 @@
 const User = require('./Model');
+const bcrypt = require('bcrypt');
 
-function userRegister(req, res) {
-  const newUser = new User({
+async function userRegister(req, res) {
+  const username = req.body.username;
+  const password = req.body.password;
+  const candidate = await User.findOne({ username });
+
+  if (candidate) {
+    return res.status(400).json({ message: 'User exists' });
+  }
+  const hashPassword = bcrypt.hashSync(password, 7);
+
+  const user = new User({
     description: req.body.description,
     priority: req.body.priority,
     status: req.body.status,
-    name: req.body.name,
+    username: username,
+    password: hashPassword,
   });
-  newUser
+
+  user
     .save()
     .then(() => {
       res.status(200).json('User created');
