@@ -8,7 +8,7 @@ const userDeleteAll = require('./userDeleteAll');
 const authorization = require('../core/authorization');
 
 const router = Router();
-router.post('/', authorization, userRegister); // localhost5000/
+router.post('/add', authorization, userRegister); // localhost5000/
 router.get('/', authorization, userGetAll); // localhost/user
 router.get('/:userId', userGetById); // localhost/user/id
 router.patch('/:userId', userUpdateById); // localhost/user/id
